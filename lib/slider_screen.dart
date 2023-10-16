@@ -1,22 +1,80 @@
+
+
+import 'package:easy_splash_screen/easy_splash_screen.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/main.dart';
 
-class SliderScreen extends StatefulWidget {
-  const SliderScreen({super.key});
+
+
+ 
+
+ 
+
+class SplashPage extends StatefulWidget {
+
+  const SplashPage({Key? key}) : super(key: key);
+
+ 
 
   @override
-  State<SliderScreen> createState() =>  SliderScreenState();
+
+  SplashPageState createState() => SplashPageState();
+
 }
 
-class  SliderScreenState extends State <SliderScreen> {
+ 
+
+class SplashPageState extends State<SplashPage> {
+
+  //Widget homePage =  ;
+
+ 
+
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text("slider example"),
-      ),
-      body: Column(children: [],)
-    );
+
+  void initState() {
+
+    //checkLogin();
+
+    super.initState();
+
+    //logOut();
+
   }
-  
+
+ 
+
+  @override
+
+  Widget build(BuildContext context) {
+
+    return EasySplashScreen(
+
+      logo: Image.asset('images/tt.jpg'),
+
+      logoWidth: 100,
+
+      backgroundColor: Colors.green,
+
+      showLoader: true,
+
+      loadingText: const Text("Loading..."),
+
+      navigator:  MyHomePage(title: 'utcyfhxhcf',),
+
+      durationInSeconds: 4,
+
+      loaderColor: Colors.white,
+
+    );
+
+  }
+
 }
+
+ 
+
+ 
+
+  
